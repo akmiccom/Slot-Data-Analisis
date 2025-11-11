@@ -2,8 +2,8 @@ name: Playwright Test
 
 on:
   workflow_dispatch:   # 手動実行可能
-  push:
-    branches: [ main ] # mainブランチにpushされたら実行
+  # push:
+  #   branches: [ main ] # mainブランチにpushされたら実行
 
 jobs:
   run-playwright:
