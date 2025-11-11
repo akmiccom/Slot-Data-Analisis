@@ -1,0 +1,102 @@
+{
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Night Owl (No Italics)",
+  "workbench.sideBar.location": "right",
+
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "editor.minimap.enabled": false,
+  "editor.accessibilitySupport": "off",
+  "editor.renderWhitespace": "boundary",
+  "editor.screenReaderAnnounceInlineSuggestion": false,
+  "editor.parameterHints.cycle": false,
+  "editor.parameterHints.enabled": false,
+  "editor.hover.enabled": false,
+  "editor.hover.above": false,
+  "editor.hover.sticky": false,
+  "editor.hover.delay": 3,
+
+  "markdown.preview.fontSize": 14,
+  "notebook.markup.fontSize": 14,
+  "debug.console.fontSize": 14,
+  "markdown.extension.list.indentationSize": "inherit",
+
+  "git.enableStatusBarSync": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  "emmet.extensionsPath": ["markdown"],
+
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*"
+  },
+
+  "csv-preview.formatValues": "never",
+  "markdown.marp.exportType": "pptx",
+
+  "python.languageServer": "Pylance",
+  "python.analysis.completeFunctionParens": true,
+
+  "[python]": {
+    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.cycle": false,
+    "editor.hover.enabled": false,
+    "editor.hover.above": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.suggest.showTypeParameters": false,
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showKeywords": false,
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.suggest.showWords": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.fontFamily": "'源ノ角ゴシック Code JP', Consolas, 'Courier New', monospace"
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "'源ノ角ゴシック Code JP', Consolas, 'Courier New', monospace"
+  },
+
+  "[json]": {
+    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.cycle": false,
+    "editor.hover.enabled": false,
+    "editor.hover.above": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.suggest.showTypeParameters": false,
+    "editor.snippetSuggestions": "top",
+    "editor.suggest.showKeywords": false,
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.printWidth": 80,
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.trailingComma": "none",
+    "prettier.bracketSpacing": true,
+    "prettier.singleQuote": false
+  },
+
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
+}

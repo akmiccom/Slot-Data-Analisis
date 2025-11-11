@@ -7,8 +7,14 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "vscode-icons-team.vscode-icons",
+        "sdras.night-owl",
         "ms-python.python",
-        "ms-python.vscode-pylance"
+        "ms-python.vscode-pylance",
+        "esbenp.prettier-vscode",
+        "marp-team.marp-vscode",
+        "mechatroner.rainbow-csv",
+        "qwtel.sqlite-viewer"
       ]
     }
   }
