@@ -8,6 +8,9 @@ def main():
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         page.goto("https://www.google.com")
+        page.screenshot(path="screenshot.png")
+        print("✅ ScreenShot saved to screenshot.png")
+        
         title = page.title()
         print(f"Page title: {title}")
         browser.close()
@@ -15,7 +18,7 @@ def main():
     # upload csv test
     df = pd.DataFrame({"name": ["Alice", "Bob"], "score": [90, 85]})
     df.to_csv("output.csv", index=False)
-    print("✅ CSV saved to data/output.csv")
+    print("✅ CSV saved to output.csv")
 
 if __name__ == "__main__":
     main()
