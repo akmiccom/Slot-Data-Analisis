@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 import pandas as pd
+imoprt os
 
 def main():
     # playwright test
@@ -13,7 +14,7 @@ def main():
 
     # upload csv test
     df = pd.DataFrame({"name": ["Alice", "Bob"], "score": [90, 85]})
-    df.to_csv("data/output.csv", index=False)
+    df.to_csv("output.csv", index=False)
     print("✅ CSV saved to data/output.csv")
 
 if __name__ == "__main__":
