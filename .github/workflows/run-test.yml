@@ -1,9 +1,9 @@
 name: Run test.py
 
 on:
-  push:           # push 時に実行
-    branches:
-      - main      # またはあなたのメインブランチ名
+  # push:           # push 時に実行
+  #   branches:
+  #     - main      # またはあなたのメインブランチ名
   workflow_dispatch:  # 手動実行もできるようにする
 
 jobs:
