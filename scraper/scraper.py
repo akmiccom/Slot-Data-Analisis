@@ -15,7 +15,7 @@ from utils import _norm_text
 # from scraping_hall_page import extract_date_url
 # from scraping_date_page import extract_model_url
 # from scraping_model_page import extract_model_data
-from scraper.scraping_result_data import extract_result_data
+from scraping_result_data import extract_result_data
 
 # from df_clean import df_data_clean
 
@@ -75,7 +75,7 @@ def scraper_all_hall(test_mode=False) -> pd.DataFrame:
 
 if __name__ == "__main__":
 
-    df = scraper_all_hall(test_mode=False)
+    df = scraper_all_hall(test_mode=True)
     # df = df_data_clean(df)
 
     # conn = sqlite3.connect(config.DB_PATH)
