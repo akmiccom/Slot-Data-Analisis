@@ -1,0 +1,127 @@
+# config/halls.yaml
+halls:
+  - name: "EXA FIRST"
+    prefecture: "東京都"
+    slug: "エクサファースト"     # ← 人が読む用。エンコードはコード側で
+    spreadsheet_id: "10-B_vV1pvUzXmvGAiHhODGJgCloOsAmqSO9HvXpk_T8"
+    days_ago: 1
+    period: 2
+
+  - name: "コンサートホールエフ成増"
+    prefecture: "東京都"
+    slug: "コンサートホールエフ成増"
+    spreadsheet_id: "1EDY2RfjDQNsapVrl2X-UrqPKoXrkQmYJnk3uPqccBxY"
+    days_ago: 1
+    period: 2
+
+  - name: "楽園大山店"
+    prefecture: "東京都"
+    slug: "楽園大山店"
+    spreadsheet_id: "1dewRwbCe783UAj7C_r5tn4CA7JyPfwxCahc8aOf9M2I"
+    days_ago: 1
+    period: 2
+
+  - name: "大山オーシャン"
+    prefecture: "東京都"
+    slug: "大山オーシャン"
+    spreadsheet_id: "1sJMqNDHE2eGzrRnaCSGUM60ky-DqE-rGK7L_e3R-N0w"
+    days_ago: 1
+    period: 2
+
+  - name: "楽園池袋店"
+    prefecture: "東京都"
+    slug: "楽園池袋店"
+    spreadsheet_id: "1WpX0BkiZtwXnxWiWvuC2lxOzH2c08rTZ4s-PXWO2YfU"
+    days_ago: 1
+    period: 2
+
+  - name: "楽園池袋店グリーンサイド"
+    prefecture: "東京都"
+    slug: "楽園池袋店グリーンサイド"
+    spreadsheet_id: "1ApsF9qay7gOj6S75u28lQvOp2EkleHRH1WGSdB_TlSw"
+    days_ago: 1
+    period: 2
+
+  - name: "マルハン大山店"
+    prefecture: "東京都"
+    slug: "マルハン大山店"
+    spreadsheet_id: "14EO39e7xjHu-H7kBOTz3ZI3M0RN6hkbFIN8XD-ZKmPE"
+    days_ago: 1
+    period: 2
+
+  - name: "マルハン池袋店"
+    prefecture: "東京都"
+    slug: "マルハン池袋店"
+    spreadsheet_id: "1EJtt8vWketvvUwwkD69H86791NUlecwIG30Ldns_qws"
+    days_ago: 1
+    period: 2
+
+  - name: "マルハン青梅新町店"
+    prefecture: "東京都"
+    slug: "マルハン青梅新町店"
+    spreadsheet_id: "1VVCzgpDuwxyuQ0AR51xBeya6ZTETvSXDoKA2tyLmnjE"
+    days_ago: 1
+    period: 2
+
+  - name: "スーパースロットサンフラワー⁺"
+    prefecture: "東京都"
+    slug: "サンフラワー瑞穂店"
+    spreadsheet_id: "1eKhvDcZsnntvwe-ehvWNepCAmkXI379n1q4EICtH-R4"
+    days_ago: 1
+    period: 2
+
+  - name: "YASUDA9"
+    prefecture: "東京都"
+    slug: "やすだ東池袋9号店"
+    spreadsheet_id: ""
+    days_ago: 1
+    period: 2
+
+  # - name: "レイト平塚"
+  #   prefecture: "茨城県"
+  #   slug: "麗都平塚"
+  #   spreadsheet_id: "1WlvgMk-u_tUWizQVOYDQVg7bECyVzLm0-wlJDgJteAw"
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: "レイトスロットステージ土浦"
+  #   prefecture: "茨城県"
+  #   slug: "麗都スロットステージ土浦"
+  #   spreadsheet_id: "1WO9qw9rBBUwJlmWe-b71sMMIh3ZlfUJJDSdh-hOhunQ"
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: "レイトつくば"
+  #   prefecture: "茨城県"
+  #   slug: "麗都つくば"
+  #   spreadsheet_id: "1yrPQ4clEFo33iT2WpeOnnEEHc7XriczG_OJYGeiWe9Y"
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: "マルハンつくば店"
+  #   prefecture: "茨城県"
+  #   slug: "マルハンつくば店"
+  #   spreadsheet_id: ""
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: "ビックマーチつくば本店"
+  #   prefecture: "茨城県"
+  #   slug: "ビックマーチつくば本店"
+  #   spreadsheet_id: "1yrPQ4clEFo33iT2WpeOnnEEHc7XriczG_OJYGeiWe9Y"
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: "パールショップともえ川越店"
+  #   prefecture: "埼玉県"
+  #   slug: "パールショップともえ川越店"
+  #   spreadsheet_id: "1i70joJ27Hs7inS-D89z9YMSJO1aRvaBeeWn0n9xpktY"
+  #   days_ago: 1
+  #   period: 2
+
+  # - name: ""
+  #   prefecture: ""
+  #   slug: ""
+  #   spreadsheet_id: ""
+  #   days_ago: 1
+  #   period: 2

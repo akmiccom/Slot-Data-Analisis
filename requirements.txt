@@ -1,3 +1,7 @@
 playwright==1.48.0
 pandas
-pandas-stubs
+beautifulsoup4
+pandas
+pyyaml
+supabase
+colorlog

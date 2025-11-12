@@ -1,9 +1,10 @@
 {
   "name": "python-playwright-env",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-
   "postCreateCommand": "pip install -r requirements.txt && playwright install --with-deps",
-
+  "containerEnv": {
+    "PYTHONPATH": "/workspaces/${localWorkspaceFolderBasename}"
+  },
   "customizations": {
     "vscode": {
       "extensions": [

@@ -1,0 +1,26 @@
+from pathlib import Path
+from dataclasses import dataclass
+
+
+MAIN_URL = "https://min-repo.com/tag/"
+
+HALLS_YAML = "config/halls.yaml"
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+LOG_DIR = BASE_DIR / DATA_DIR / "logs"
+CSV_DIR = BASE_DIR / DATA_DIR / "csv"
+IMG_DIR = BASE_DIR / DATA_DIR / "imgs"
+
+for d in [DATA_DIR, LOG_DIR, CSV_DIR, IMG_DIR]:
+    d.mkdir(exist_ok=True)
+
+
+@dataclass
+class HallInfo:
+    slug: str
+    period: int
+
+
+if __name__ == "__main__":
+    print(BASE_DIR)
