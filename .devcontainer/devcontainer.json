@@ -1,10 +1,10 @@
 {
-  "name": "python-playwright-env",
+  "name": "python-devcontainer-env",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
-  "postCreateCommand": "pip install -r requirements.txt && playwright install --with-deps",
-  "containerEnv": {
-    "PYTHONPATH": "/workspaces/${localWorkspaceFolderBasename}"
-  },
+  // -----------------------------
+  // Codespace作成後の自動実行
+  // -----------------------------
+  "postCreateCommand": "pip install -r requirements.txt || pip install playwright && playwright install-deps && playwright install",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -13,10 +13,29 @@
         "ms-python.python",
         "ms-python.vscode-pylance",
         "esbenp.prettier-vscode",
-        "marp-team.marp-vscode",
-        "mechatroner.rainbow-csv",
-        "qwtel.sqlite-viewer"
-      ]
+      ],
+      "settings": {
+        "python.formatting.provider": "black",
+        "python.formatting.blackArgs": ["--line-length", "100"],
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+      }
     }
+  },
+    // -----------------------------
+  // 環境変数など
+  // -----------------------------
+  "containerEnv": {
+    "PYTHONPATH": "/workspaces/${localWorkspaceFolderBasename}"
+  },
+
+  // -----------------------------
+  // Codespacesのメモリ・CPU指定（任意）
+  // -----------------------------
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
   }
 }

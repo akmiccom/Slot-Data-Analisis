@@ -12,6 +12,8 @@ LOG_DIR = BASE_DIR / DATA_DIR / "logs"
 CSV_DIR = BASE_DIR / DATA_DIR / "csv"
 IMG_DIR = BASE_DIR / DATA_DIR / "imgs"
 
+LOG_PATH = LOG_DIR / 'minrepo.log'
+
 for d in [DATA_DIR, LOG_DIR, CSV_DIR, IMG_DIR]:
     d.mkdir(exist_ok=True)
 

@@ -1,10 +1,12 @@
 {
+  // ===== エディタ基本設定 =====
   "files.autoSave": "afterDelay",
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.sideBar.location": "right",
 
+  // ===== エディタ表示・挙動 =====
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
@@ -19,35 +21,7 @@
   "editor.hover.sticky": false,
   "editor.hover.delay": 3,
 
-  "markdown.preview.fontSize": 14,
-  "notebook.markup.fontSize": 14,
-  "debug.console.fontSize": 14,
-  "markdown.extension.list.indentationSize": "inherit",
-
-  "git.enableStatusBarSync": false,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.openRepositoryInParentFolders": "never",
-
-  "emmet.extensionsPath": ["markdown"],
-
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.js",
-    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
-    "*.jsx": "${capture}.js",
-    "*.tsx": "${capture}.ts",
-    "tsconfig.json": "tsconfig.*.json",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
-    "*.sqlite": "${capture}.${extname}-*",
-    "*.db": "${capture}.${extname}-*"
-  },
-
-  "csv-preview.formatValues": "never",
-  "markdown.marp.exportType": "pptx",
-
-  "python.languageServer": "Pylance",
-  "python.analysis.completeFunctionParens": true,
-
+  // ===== フォント・見た目 =====
   "[python]": {
     "editor.parameterHints.enabled": false,
     "editor.parameterHints.cycle": false,
@@ -98,5 +72,47 @@
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
-  }
+  },
+
+  // ===== Python関連設定 =====
+  "python.languageServer": "Pylance",
+  "python.analysis.completeFunctionParens": true,
+
+  // ===== Black フォーマッタ設定 =====
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "100"],
+
+  // import文の整列（isort相当）
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+
+  // ===== その他ツール設定 =====
+  "markdown.preview.fontSize": 14,
+  "notebook.markup.fontSize": 14,
+  "debug.console.fontSize": 14,
+  "markdown.extension.list.indentationSize": "inherit",
+
+  // ===== Git関連 =====
+  "git.enableStatusBarSync": false,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // ===== ファイルネスティング（整理） =====
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*"
+  },
+
+  // ===== CSVプレビューやMarp設定 =====
+  "csv-preview.formatValues": "never",
+  "markdown.marp.exportType": "pptx"
 }
