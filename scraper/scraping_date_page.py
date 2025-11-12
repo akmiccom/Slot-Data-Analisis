@@ -32,7 +32,10 @@ def extract_model_url(
 
     # スクリーンショット
     page.screenshot(
-        path=config.IMG_DIR / f"{hall}_screenshot_date.jpg", type="jpeg", quality=50
+        path=config.IMG_DIR / f"{hall}_date_page.jpg",
+        full_page=True,
+        type="jpeg",
+        quality=50,
     )
 
     title = _norm_text(page.locator("h1").first.text_content())

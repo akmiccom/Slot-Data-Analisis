@@ -36,7 +36,10 @@ def extract_date_url(hall_url, page, period) -> list[tuple[str, str, str, str]]:
 
     # スクリーンショット
     page.screenshot(
-        path=config.IMG_DIR / f"{hall}_screenshot_hall.jpg", type="jpeg", quality=50
+        path=config.IMG_DIR / f"{hall}_hall_page.jpg",
+        full_page=True,
+        type="jpeg",
+        quality=50,
     )
 
     # 日付リンク
