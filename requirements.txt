@@ -1,7 +1,7 @@
-playwright==1.48.0
-pandas
+playwright
 beautifulsoup4
 pandas
+pandas-stubs
 pyyaml
 supabase
 colorlog

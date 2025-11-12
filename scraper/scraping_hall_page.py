@@ -1,9 +1,6 @@
 from playwright.sync_api import sync_playwright
-
-# from playwright.sync_api import Page, sync_playwright, TimeoutError as PWTimeout
 from urllib.parse import quote, urljoin
-
-# import pandas as pd
+import pandas as pd
 import re
 import datetime as dt
 import os
@@ -13,7 +10,7 @@ from utils import _norm_text
 from logger_setup import setup_logger
 
 # =========================
-# 設定・ロガー
+# ロガー
 # =========================
 filename, ext = os.path.splitext(os.path.basename(__file__))
 logger = setup_logger(filename, log_file=config.LOG_PATH)
@@ -25,16 +22,22 @@ logger = setup_logger(filename, log_file=config.LOG_PATH)
 def extract_date_url(hall_url, page, period) -> list[tuple[str, str, str, str]]:
     """
     ホールのメインページから、直近 period 件の日付リンクを取得
-    returns: List[(prefecture, h_name, date(YYYY-MM-DD), date_url)]
+    returns: List[(prefecture, hall, date(YYYY-MM-DD), date_url)]
     """
 
-    logger.info(f"ホールのメインページにアクセス: {hall_url}")
+    logger.info(f"ホールのトップページにアクセスします。")
+    logger.info(f"url: {hall_url}")
     page.goto(hall_url, timeout=90_000, wait_until="domcontentloaded")
 
     # ホール名・県名
-    h_name = _norm_text(page.locator("#content h1").first.text_content())
+    hall = _norm_text(page.locator("#content h1").first.text_content())
     pref = _norm_text(page.locator("#content div span.todofuken").first.text_content())
-    logger.info("Hall: %s / Pref: %s", h_name, pref)
+    logger.info("Hall: %s / Pref: %s", hall, pref)
+
+    # スクリーンショット
+    page.screenshot(
+        path=config.IMG_DIR / f"{hall}_screenshot.jpg", type="jpeg", quality=50
+    )
 
     # 日付リンク
     css = "#content div table tbody tr td a"
@@ -64,26 +67,28 @@ def extract_date_url(hall_url, page, period) -> list[tuple[str, str, str, str]]:
             logger.warning("日付に変換できません: %s", date_text)
             continue
 
-        date_urls.append((pref, h_name, date_iso, href))
+        date_urls.append((pref, hall, date_iso, href))
 
     logger.info("取得した日付URL: %d 件", len(date_urls))
     if date_urls:
-        logger.debug(f"date_urls[0] = {date_urls[0]}")
+        logger.debug(f"date_urlsの一行目 : {date_urls[0]}")
+        for i, date_url in enumerate(date_urls):
+            logger.debug(f"{i+1} = {date_url}")
+
+    columns = ["pref", "hall", "date", "date_url"]
+    df = pd.DataFrame(date_urls, columns=columns)
+    df.to_csv(config.CSV_DIR / f"{hall}_date_urls.csv", index=False)
 
     return date_urls
 
 
 if __name__ == "__main__":
 
-    MAIN_URL = "https://min-repo.com/tag/"
-
-    h_name = "やすだ東池袋9号店"
-    h_name = "大山オーシャン"
-    hall_url = MAIN_URL + quote(h_name)
-    hall_url = urljoin(MAIN_URL, quote(h_name))
+    hall = "やすだ東池袋9号店"
+    hall = "大山オーシャン"
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
-        title = page.title()
-        # date_urls = extract_date_url(hall_url, page, period=5)
+        hall_url = urljoin(config.MAIN_URL, quote(hall))
+        date_urls = extract_date_url(hall_url, page, period=5)

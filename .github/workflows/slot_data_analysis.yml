@@ -1,4 +1,4 @@
-name: Playwright Test
+name: slot_data_analysis
 
 on:
   workflow_dispatch:   # 手動実行可能
@@ -30,19 +30,18 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install --with-deps
+          pip install playwright
+          playwright install
+          playwright install-deps
 
       - name: Run Playwright script
-        run: python test_playwright.py
+        run: python scraper/scraping_hall_page.py
 
       - name: Save scraped results
         uses: actions/upload-artifact@v4
         with:
           name: scraped-results
-          path: |
-            output.csv
-            screenshot.png
-
+          path: data/  # フォルダ全体
 
 
 
