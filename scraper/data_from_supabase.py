@@ -25,8 +25,8 @@ def fetch(view: str, start: str, end: str, hall: str = None, model: str = None):
 if __name__ == "__main__":
 
     view = "result_joined"
-    start = "2025-11-10"
-    end = "2025-11-10"
+    start = "2025-10-01"
+    end = "2025-11-13"
     # hall = "楽園ハッピーロード大山"
     # model = "マイジャグラーV"
 
@@ -36,5 +36,5 @@ if __name__ == "__main__":
 
     print(df.hall.unique())
     print(df.model.unique())
-    print(df.shape)
-    print(df.tail())
+    print(df.date.unique())
+    # print(df.tail())
