@@ -1,5 +1,33 @@
 # config/halls.yaml
 halls:
+  - name: "ミリオン平和台16号店"
+    prefecture: "東京都"
+    slug: "ミリオン平和台16号店"     # ← 人が読む用。エンコードはコード側で
+    spreadsheet_id: ""
+    days_ago: 1
+    period: 2
+
+  - name: "ミリオン東武練馬店スロット館"
+    prefecture: "東京都"
+    slug: "ミリオン東武練馬13号店"     # ← 人が読む用。エンコードはコード側で
+    spreadsheet_id: ""
+    days_ago: 1
+    period: 2
+
+  - name: "パラッツォ千川店"
+    prefecture: "東京都"
+    slug: "パラッツォ千川店"     # ← 人が読む用。エンコードはコード側で
+    spreadsheet_id: ""
+    days_ago: 1
+    period: 2
+
+  - name: "練馬オーシャン"
+    prefecture: "東京都"
+    slug: "練馬オーシャン"     # ← 人が読む用。エンコードはコード側で
+    spreadsheet_id: ""
+    days_ago: 1
+    period: 2
+
   - name: "EXA FIRST"
     prefecture: "東京都"
     slug: "エクサファースト"     # ← 人が読む用。エンコードはコード側で
