@@ -17,10 +17,25 @@ st.markdown(f"""
     - 機種別出玉推移
     """)
 
-st.header(f"データベースから最新 {N_PAST_DAYS} 日分のデータを表示", divider="rainbow")
-df = fetch("result_joined", n_d_ago, today, hall=None, model=None)
-df = df.sort_values(by=["date", "hall", "model"], ascending=[False, True, True])
-st.dataframe(df, height="auto", width="stretch")
-st.markdown(f"""
-    ホール {df.hall.nunique()} 件、モデル {df.model.nunique()} 件, データ {df.shape[0]} 件 を表示しています。
-    """)
+# st.markdown("""
+# ### 📊 [データベース検索ページ](pages/01_データベース検索.py)
+# - Supabase のデータを検索するページです。
+
+# ### 📈 [分析ページ](pages/02_ホール別出玉率履歴.py)
+# - 過去データの分析用ページです。
+# """)
+
+st.page_link("pages/01_データベース検索.py", label="データベース", icon="📊")
+st.page_link("pages/02_ホール別出玉率履歴.py", label="ホール別分析", icon="📈")
+st.page_link("pages/03_機種別出玉率履歴.py", label="機別種分析", icon="📈")
+st.page_link("pages/04_台別出玉率履歴.py", label="台別分析", icon="📈")
+st.page_link("pages/06_末尾日統計.py", label="末尾日分析", icon="📈")
+
+
+# st.header(f"データベースから最新 {N_PAST_DAYS} 日分のデータを表示", divider="rainbow")
+# df = fetch("result_joined", n_d_ago, today, hall=None, model=None)
+# df = df.sort_values(by=["date", "hall", "model"], ascending=[False, True, True])
+# st.dataframe(df, height="auto", width="stretch")
+# st.markdown(f"""
+#     ホール {df.hall.nunique()} 件、モデル {df.model.nunique()} 件, データ {df.shape[0]} 件 を表示しています。
+#     """)
